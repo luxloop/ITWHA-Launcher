@@ -10,7 +10,7 @@ void ofApp::setup(){
     }
     
     ofSleepMillis(5000);
-    ofSystem("cp -r ~/Desktop/IFTWA/ /Volumes/ITWHA\\ Ram\\ Disk/");
+    ofSystem("cp -r ~/Desktop/ITWHA/ /Volumes/ITWHA\\ Ram\\ Disk/");
     ofSleepMillis(5000);
     ofSystem("open -a Terminal /Volumes/ITWHA\\ Ram\\ Disk/EyeWall_OverheadDebug.app/Contents/MacOS/EyeWall_OverheadDebug");
 }
