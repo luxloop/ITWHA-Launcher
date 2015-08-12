@@ -5,7 +5,7 @@ void ofApp::setup(){
     if (ofDirectory::doesDirectoryExist("/Volumes/ITWHA Ram Disk")) {
         cout << "found it" << endl;
     } else {
-        string s = ofSystem("diskutil erasevolume HFS+ 'ITWHA Ram Disk' `hdiutil attach -nomount ram://4194304`");
+        string s = ofSystem("diskutil erasevolume HFS+ 'ITWHA Ram Disk' `hdiutil attach -nomount ram://1048576`");
         cout << s << endl;
     }
     
