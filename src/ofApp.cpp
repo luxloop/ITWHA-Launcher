@@ -12,7 +12,18 @@ void ofApp::setup(){
     ofSleepMillis(5000);
     ofSystem("cp -r ~/Desktop/ITWHA/ /Volumes/ITWHA\\ Ram\\ Disk/");
     ofSleepMillis(5000);
-    ofSystem("open -a Terminal /Volumes/ITWHA\\ Ram\\ Disk/EyeWall_OverheadDebug.app/Contents/MacOS/EyeWall_OverheadDebug");
+    
+    if (ofDirectory::doesDirectoryExist("/Volumes/ITWHA Ram Disk/EyeWall_OverheadDebug.app")) {
+        ofSystem("open -a Terminal /Volumes/ITWHA\\ Ram\\ Disk/EyeWall_OverheadDebug.app/Contents/MacOS/EyeWall_OverheadDebug");
+    } else if (ofDirectory::doesDirectoryExist("/Volumes/ITWHA Ram Disk/EyeWall_Overhead.app")) {
+        ofSystem("open -a Terminal /Volumes/ITWHA\\ Ram\\ Disk/EyeWall_Overhead.app/Contents/MacOS/EyeWall_Overhead");
+    } else {
+        cout << "could ot find ITWHA" << endl;
+    }
+    
+    ofSleepMillis(5000);
+    
+    ofExit();
 }
 
 //--------------------------------------------------------------
